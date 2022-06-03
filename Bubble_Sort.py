@@ -1,23 +1,18 @@
-#class bblsort(object):
 
-print(" in bbl sort ")
-
-def bubbleSort(user_inputs):
-    for passnum in range(len(user_inputs)-1,0,-1):
-        for i in range(passnum):
-            if user_inputs[i]>user_inputs[i+1]:
-                temp = user_inputs[i]
-                user_inputs[i] = user_inputs[i+1]
-                user_inputs[i+1] = temp
-    #print("user inputs :" + str(user_inputs))
-    return user_inputs
+class BubbleSort:
+    def __init__(self, list_inp):
+        self.user_inputs = list_inp
+        for passnum in range(len(self.user_inputs)-1, 0, -1):
+            for i in range(passnum):
+                if self.user_inputs[i]>self.user_inputs[i+1]:
+                    temp = self.user_inputs[i]
+                    self.user_inputs[i] = self.user_inputs[i+1]
+                    self.user_inputs[i+1] = temp
+        print("Sorted list with BBl Sort:" + str(self.user_inputs))
 
 
-"""
-user_inputs = [int(x) for x in input("Enter multiple values seperated with comma : ").split(" ")] #getting multiple values from the user seperated by space
-print("the list is : " + str(user_inputs))
 
-Sorted_list= bubbleSort(user_inputs)
-print("Sorted List : " + str(Sorted_list))
+def main():
+    BubbleSort(list_inp)
 
-"""
+if __name__ == "__main__": main()
