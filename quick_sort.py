@@ -2,7 +2,7 @@
 class QuickSort:
     def __init__(self, list_inp):
         self.xs = list_inp
-        # self.sorted_list = lambda a: quicksort(self.xs)
+        self.sorted_list = lambda a: quicksort(self.xs)
 
         def partition(xs, start, end):
             print("in_p")
@@ -30,10 +30,11 @@ class QuickSort:
 
 
 
+
 def main():
-    user_inputs = [int(x) for x in input("Enter multiple values seperated with comma : ").split(",")]
-    # getting multiple values from the user seperated by space
-    print("the list is : " + str(user_inputs))
+    # user_inputs = [int(x) for x in input("Enter multiple values seperated with comma : ").split(",")]
+    # # getting multiple values from the user seperated by space
+    # print("the list is : " + str(user_inputs))
     # list_inp
     s_list = QuickSort(user_inputs)
 

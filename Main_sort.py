@@ -1,4 +1,5 @@
 from Bubble_Sort import *
+from quick_sort import *
 # insertion_sort, Merge_sort,quick_sort,selection_sort
 # import insertion_sort, Merge_sort, quick_sort, selection_sort
 
@@ -14,6 +15,7 @@ class Main_Sort:
         if self.sort_option == "1":
             print("inside sort selector if stmt")
             self.sorted_list = BubbleSort(self.user_inputs)
+
         elif self.sort_option == "2":
             print("inside ins sort cond if stmt")
             sorted_list = insertion_sort.insertionSort(self.user_inputs)
@@ -24,8 +26,8 @@ class Main_Sort:
             print("Sorted list with Merge Sort:" + str(sorted_list))
         elif self.sort_option == "4":
             print("inside quick sort cond if stmt")
-            sorted_list = quick_sort.quicksort(self.user_inputs)
-            print("Sorted list with quick Sort:" + str(sorted_list))
+            self.sorted_list = QuickSort(self.user_inputs)
+            # print("Sorted list with quick Sort:" + str(sorted_list))
         elif self.sort_option == "5":
             print("inside Selection sort cond if stmt")
             sorted_list = selection_sort.selectionSort(self.user_inputs)
@@ -49,6 +51,7 @@ def main():
         print("Choose a number to select the type of sort you want to use: \n")
         sort_selector = input("1: Bubble Sort \n" +"2: Insertion Sort \n" + "3: Merge Sort \n" + "4: Quick Sort \n" + "5: Selection Sort \n " )
         Main_Sort(sort_selector, user_inputs)
+
 
     
 if __name__ == "__main__": main()
